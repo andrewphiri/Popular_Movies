@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mostPopularMoviesFragment">
+
+    <fragment
+        android:id="@+id/mostPopularMoviesFragment"
+        android:name="com.example.popularmoviesretrofit.MostPopularMoviesFragment"
+        android:label="@string/most_popular_title"
+        tools:layout="@layout/fragment_most_popular_movies" />
+    <fragment
+        android:id="@+id/topRatedMoviesFragment"
+        android:name="com.example.popularmoviesretrofit.TopRatedMoviesFragment"
+        android:label="@string/top_rated_title"
+        tools:layout="@layout/fragment_top_rated_movies" />
+    <fragment
+        android:id="@+id/favoritesMoviesFragment"
+        android:name="com.example.popularmoviesretrofit.FavoritesMoviesFragment"
+        android:label="@string/favorites"
+        tools:layout="@layout/fragment_favorites_movies"/>
+    <action android:id="@+id/action_global_mostPopularMoviesFragment"
+        app:destination="@id/mostPopularMoviesFragment"
+        app:popUpTo="@id/mostPopularMoviesFragment"
+        app:popUpToInclusive="true"/>
+    <action
+        android:id="@+id/action_global_topRatedMoviesFragment"
+        app:destination="@id/topRatedMoviesFragment"
+        app:popUpToInclusive="true"
+        app:popUpTo="@id/mostPopularMoviesFragment"/>
+    <action
+        android:id="@+id/action_global_favoritesMoviesFragment"
+        app:destination="@id/favoritesMoviesFragment"
+        app:popUpToInclusive="true"
+        app:popUpTo="@id/mostPopularMoviesFragment"/>
+</navigation>

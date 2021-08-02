@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:onClick="trailerOne"
+        android:id="@+id/trailer1"
+        android:visibility="visible">
+    <TextView
+        style="@style/border"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/padding"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play_button"/>
+
+        <TextView
+           style="@style/trailerTextView"
+            android:text="@string/trailer_1"
+            android:id="@+id/textViewTrailer1"/>
+    </LinearLayout>
+        <TextView
+            style="@style/border"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/trailer2"
+        android:visibility="gone"
+        android:onClick="trailerTwo"
+        android:layout_marginTop="8dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/padding"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play_button"/>
+
+        <TextView
+            style="@style/trailerTextView"
+            android:text="Trailer 2"
+            android:id="@+id/textViewTrailer2"/>
+    </LinearLayout>
+
+    <TextView
+        style="@style/border"
+        android:id="@+id/borderline"/>
+    </LinearLayout>
+
+</LinearLayout>
